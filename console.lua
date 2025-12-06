@@ -34,26 +34,26 @@ local totalUsers = incrementUserCount()
 
 -- Crea finestra principale
 local Window = Rayfield:CreateWindow({
-    Name = "Rich Hub",
-    WindowTitle = "Rich Hub",
+    Name = "Vector Hub",
+    WindowTitle = "Vector Hub",
     LoadingTitle = "Script Hub",
-    LoadingSubtitle = "By: Rich",
+    LoadingSubtitle = "By: Bogie",
     ConfigurationSaving = {
         Enabled = true,
-        FolderName = "RichHubConfig",
+        FolderName = "VectorHubConfig",
         FileName = "MainConfig"
     },
     Discord = {
         Enabled = true,
-        Invite = "97mkbSWwmQ",
+        Invite = "RRuyhrX37U",
         RememberJoins = true
     },
     KeySystem = true,
     KeySettings = {
-        Title = "Rich Hub | Key System 🔑",
+        Title = "Vector Hub | Key System 🔑",
         Subtitle = "Enter the key to continue",
-        Note = "Get the key from our Discord.gg/n7AucXH96x",
-        FileName = "RichHubKey",
+        Note = "Get the key from our https://discord.gg/RRuyhrX37U",
+        FileName = "VectorHubKey",
         SaveKey = true,
         GrabKeyFromSite = false,
         Key = {"FreeAccess57"}
@@ -63,12 +63,12 @@ local Window = Rayfield:CreateWindow({
 -- ===== TAB: Read Me =====
 local TabReadMe = Window:CreateTab("Read Me", 6034509995)
 local SectionRead = TabReadMe:CreateSection("Credits")
-TabReadMe:CreateLabel("Hub Created by: Rich")
+TabReadMe:CreateLabel("Hub Created by: Bogie")
 TabReadMe:CreateLabel("Thanks for using my hub ❤️")
 TabReadMe:CreateButton({
     Name = "Copy Discord Link 📋",
     Callback = function()
-        setclipboard("https://discord.gg/97mkbSWwmQ")
+        setclipboard("https://discord.gg/RRuyhrX37U")
         Rayfield:Notify({
             Title = "Copied!",
             Content = "Discord link copied to clipboard ✔️",
