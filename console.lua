@@ -98,9 +98,14 @@ local GameScripts = {
     ["Grow A Garden Test"] = "https://rawscripts.net/raw/Grow-a-Garden-Blackhub-Infinite-Sheckles-41369",
     ["Attack Zombie OP"] = "https://scriptblox.com/raw/Universal-Script-Desynced-43753",
 
-    -- ⭐ TUA RICHIESTA: NUOVI SCRIPT AGGIUNTI ⭐
+    -- ⭐ NUOVI SCRIPT AGGIUNTI ⭐
     ["Forsaken"] = "https://raw.githubusercontent.com/scripture2025/FlashHub/refs/heads/main/Forsaken",
     ["Ability Wars"] = "https://raw.githubusercontent.com/scripture2025/FlashHub/refs/heads/main/AbilityWars",
+    ["Basketball Legends"] = "https://raw.githubusercontent.com/scripture2025/FlashHub/refs/heads/main/BasketballLegends",
+    ["Flick"] = "https://raw.githubusercontent.com/scripture2025/FlashHub/refs/heads/main/Flick",
+    ["Prison Life"] = "https://raw.githubusercontent.com/scripture2025/FlashHub/refs/heads/main/PrisonLife",
+    ["LuckyBlocks"] = "https://raw.githubusercontent.com/scripture2025/FlashHub/refs/heads/main/LuckyBlocks",
+    ["Plants Vs Brainrot"] = "https://raw.githubusercontent.com/scripture2025/FlashHub/refs/heads/main/PlantsVsBrainrot",
 
     ["Demon Fall"] = "https://rawscripts.net/raw/Demonfall-DUPE-Solixhub-OP-Auto-Farms-Solara-Supported-25087",
     ["Blue Lock Rivals"] = "https://rawscripts.net/raw/2-HRS-Blue-Lock:-Rivals-CRISTIANO-RONALDO-MOVESET-42974",
@@ -147,16 +152,31 @@ for name, link in pairs(UtilityScripts) do
 end
 
 -- ==========================
--- TAB: Soon
+-- TAB: Update (Random Script)
 -- ==========================
-local TabSoon = Window:CreateTab("Soon", 6034509992)
-TabSoon:CreateButton({
-    Name = "Mystery Script",
+local TabUpdate = Window:CreateTab("Update", 6034509992)
+
+local MysteryScripts = {
+    "https://raw.githubusercontent.com/scripture2025/FlashHub/refs/heads/main/99Nights2",
+    "https://raw.githubusercontent.com/scripture2025/FlashHub/refs/heads/main/Forsaken",
+    "https://raw.githubusercontent.com/scripture2025/FlashHub/refs/heads/main/AbilityWars",
+    "https://raw.githubusercontent.com/scripture2025/FlashHub/refs/heads/main/BasketballLegends",
+    "https://raw.githubusercontent.com/scripture2025/FlashHub/refs/heads/main/Flick",
+    "https://raw.githubusercontent.com/scripture2025/FlashHub/refs/heads/main/PrisonLife",
+    "https://raw.githubusercontent.com/scripture2025/FlashHub/refs/heads/main/LuckyBlocks",
+    "https://raw.githubusercontent.com/scripture2025/FlashHub/refs/heads/main/PlantsVsBrainrot"
+}
+
+TabUpdate:CreateButton({
+    Name = "Random Script",
     Callback = function()
+        local randIndex = math.random(1, #MysteryScripts)
+        local scriptLink = MysteryScripts[randIndex]
         Rayfield:Notify({
-            Title = "Coming Soon",
-            Content = "This section will have new scripts!",
-            Duration = 5
+            Title = "Random Script",
+            Content = "Executing random update script!",
+            Duration = 4
         })
+        loadstring(game:HttpGet(scriptLink, true))()
     end
 })
