@@ -40,18 +40,18 @@ local totalUsers = incrementUserCount()
 -- CREA FINESTRA PRINCIPALE
 -- ==========================
 local Window = Rayfield:CreateWindow({
-    Name = "Vector Hub",
-    WindowTitle = "Vector Hub",
+    Name = "Arci Hub",
+    WindowTitle = "Arci Hub",
     LoadingTitle = "Script Hub",
     LoadingSubtitle = "By: Bogie",
     ConfigurationSaving = { Enabled = true, FolderName = "VectorHubConfig", FileName = "MainConfig" },
     Discord = { Enabled = true, Invite = "RRuyhrX37U", RememberJoins = true },
     KeySystem = true,
     KeySettings = {
-        Title = "Vector Hub | Key System",
+        Title = "Arci Hub | Key System",
         Subtitle = "Enter the key to continue",
         Note = "Get the key from our Discord!",
-        FileName = "VectorHubKey",
+        FileName = "ArciHubKey",
         SaveKey = true,
         GrabKeyFromSite = false,
         Key = {"FreeAccess57"}
@@ -63,8 +63,8 @@ local Window = Rayfield:CreateWindow({
 -- ==========================
 local TabReadMe = Window:CreateTab("Read Me", 6034509995)
 TabReadMe:CreateSection("Credits")
-TabReadMe:CreateLabel("Hub Created by: Bogie")
-TabReadMe:CreateLabel("Thanks for using Vector Hub ❤️")
+TabReadMe:CreateLabel("Hub Created by: Bogie and ")
+TabReadMe:CreateLabel("Made it with ❤️Arci Hub:)")
 TabReadMe:CreateButton({
     Name = "Copy Discord Link",
     Callback = function()
